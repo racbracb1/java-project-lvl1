@@ -10,12 +10,13 @@ public class Even {
         String name;
         name = userName.nextLine();
         System.out.println("Hello, " + name + "!");
-        var answerYes = "yes";
-        var answerNo = "no";
+        System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
+
         int indexRightAnswers = 0;
         while (indexRightAnswers < 3) {
             int randomNumber = (int) (Math.random() * 100);
-            System.out.println(randomNumber);
+            System.out.println("Question: " + randomNumber);
+            System.out.println("Your anwser: ");
             Scanner answer = new Scanner(System.in);
             String ans = answer.nextLine();
         if ((randomNumber % 2 == 0 && ans.equals("yes")) || (randomNumber % 2 != 0 && ans.equals("no"))) {
