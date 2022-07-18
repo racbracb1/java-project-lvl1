@@ -1,14 +1,13 @@
-package hexlet.code;
+package hexlet.code.Games;
+
+import hexlet.code.Engine;
 
 import java.util.Scanner;
 
+
 public class Even {
     public static String parityCheck() {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.println("May I have your name?");
-        Scanner userName = new Scanner(System.in);
-        String name;
-        name = userName.nextLine();
+        var name = Engine.gameGreeting();
         System.out.println("Hello, " + name + "!");
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
 
