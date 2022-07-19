@@ -34,7 +34,7 @@ public class Calc {
                     if (ans == example) {
                         System.out.println("Correct!");
                         indexRightAnswers++;
-                    } else if (ans != example) {
+                    } else  {
                         return ans + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, " + name;
                     }
                     break;
@@ -48,7 +48,7 @@ public class Calc {
                     if (ans == example) {
                         System.out.println("Correct!");
                         indexRightAnswers++;
-                    } else if (ans != example) {
+                    } else  {
                         return ans + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, " + name;
                     }
                     break;
@@ -62,7 +62,7 @@ public class Calc {
                     if (ans == example) {
                         System.out.println("Correct!");
                         indexRightAnswers++;
-                    } else if (ans != example) {
+                    } else  {
                         return ans + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, " + name;
                     }
                     break;

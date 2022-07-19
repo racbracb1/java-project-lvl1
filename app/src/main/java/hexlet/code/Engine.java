@@ -10,5 +10,16 @@ public class Engine {
         String name;
         name = userName.nextLine();
         return name;
+
+    }
+    public static int randomFirstNumber() {
+        var firstNumber = (int) (Math.random() * 100);
+
+        return firstNumber;
+    }
+
+    public static int randomSecondNumber() {
+        var secondNumber = (int) (Math.random() * 100);
+        return secondNumber;
     }
 }
