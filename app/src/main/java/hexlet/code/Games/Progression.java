@@ -14,7 +14,6 @@ public class Progression {
         final int arraySizeMin = 5;
         final int randomStepMin = 2;
         final int countToWin = 3;
-        System.out.println("Hello, " + name + "!");
         System.out.println("What number is missing in the progression?");
         while (indexRightAnswers < countToWin) {
             Random random = new Random();

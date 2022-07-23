@@ -10,7 +10,6 @@ public class GCD {
         int indexRightAnswers = 0;
         final int countToWin = 3;
         var name = Engine.gameGreeting();
-        System.out.println("Hello, " + name + "!");
         System.out.println("Find the greatest common divisor of given numbers.");
         while (indexRightAnswers < countToWin) {
             var firstNumber = Engine.randomFirstNumber();

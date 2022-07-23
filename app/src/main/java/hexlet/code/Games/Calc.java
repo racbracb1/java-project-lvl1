@@ -8,7 +8,6 @@ import java.util.Random;
 public class Calc {
     public static String calculate() {
         var name = Engine.gameGreeting();
-        System.out.println("Hello, " + name + "!");
         System.out.println("What is the result of the expression?");
         final int countToWin = 3;
         int indexRightAnswers = 0;

@@ -11,14 +11,13 @@ public class Engine {
         Scanner userName = new Scanner(System.in);
         String name;
         name = userName.nextLine();
+        System.out.println("Hello, " + name + "!");
         return name;
 
     }
     public static int randomFirstNumber() {
         final int randomTill = 100;
-        var firstNumber = (int) (Math.random() * randomTill);
-
-        return firstNumber;
+        return (int) (Math.random() * randomTill);
     }
 
     public static int randomSecondNumber() {

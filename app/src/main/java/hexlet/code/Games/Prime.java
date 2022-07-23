@@ -10,7 +10,6 @@ public class Prime {
         var name = Engine.gameGreeting();
         final int countToWin = 3;
         int indexRightAnswers = 0;
-        System.out.println("Hello, " + name + "!");
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         while (indexRightAnswers < countToWin) {
             boolean isSimple = true;

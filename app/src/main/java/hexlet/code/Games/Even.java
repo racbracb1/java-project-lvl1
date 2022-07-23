@@ -9,7 +9,6 @@ public class Even {
     public static String parityCheck() {
         var name = Engine.gameGreeting();
         final int countToWin = 3;
-        System.out.println("Hello, " + name + "!");
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
         int indexRightAnswers = 0;
         while (indexRightAnswers < countToWin) {
