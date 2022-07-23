@@ -35,7 +35,7 @@ public class GCD {
                 return ans + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, " + name;
             }
 
-        }return "Congratulations, " + name + "!";
+        } return "Congratulations, " + name + "!";
     }
 }
 

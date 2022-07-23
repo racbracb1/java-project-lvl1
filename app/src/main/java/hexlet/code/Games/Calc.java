@@ -67,12 +67,8 @@ public class Calc {
                     }
                     break;
             }
-
-            }return "Congratulations, " + name + "!";
-
-        }
-
-
+        } return "Congratulations, " + name + "!";
     }
+}
 
 
