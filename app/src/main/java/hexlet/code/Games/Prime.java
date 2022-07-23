@@ -8,15 +8,14 @@ import java.util.Scanner;
 public class Prime {
     public static String prime() {
         var name = Engine.gameGreeting();
+        final int countToWin = 3;
         int indexRightAnswers = 0;
         System.out.println("Hello, " + name + "!");
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-
-
-        while (indexRightAnswers < 3) {
+        while (indexRightAnswers < countToWin) {
             boolean isSimple = true;
             Random random = new Random();
-            int randomNumber = random.nextInt(100 + 1);
+            final int randomNumber = random.nextInt(100 + 1);
             Scanner answer = new Scanner(System.in);
             System.out.println("Question: " + randomNumber);
             System.out.println("Your answer: ");

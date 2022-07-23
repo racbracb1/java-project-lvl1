@@ -8,10 +8,11 @@ public class GCD {
     public static String divisor() {
         int example;
         int indexRightAnswers = 0;
+        final int countToWin = 3;
         var name = Engine.gameGreeting();
         System.out.println("Hello, " + name + "!");
         System.out.println("Find the greatest common divisor of given numbers.");
-        while (indexRightAnswers < 3) {
+        while (indexRightAnswers < countToWin) {
             var firstNumber = Engine.randomFirstNumber();
             var secondNumber = Engine.randomSecondNumber();
             var firstNumberString = Integer.toString(firstNumber);

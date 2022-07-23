@@ -8,11 +8,12 @@ import java.util.Scanner;
 public class Even {
     public static String parityCheck() {
         var name = Engine.gameGreeting();
+        final int countToWin = 3;
         System.out.println("Hello, " + name + "!");
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
         int indexRightAnswers = 0;
-        while (indexRightAnswers < 3) {
-            int randomNumber = (int) (Math.random() * 100);
+        while (indexRightAnswers < countToWin) {
+            int randomNumber = Engine.randomFirstNumber();
             System.out.println("Question: " + randomNumber);
             System.out.println("Your anwser: ");
             Scanner answer = new Scanner(System.in);

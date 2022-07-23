@@ -10,15 +10,19 @@ public class Progression {
     public static String progression() {
         var name = Engine.gameGreeting();
         int indexRightAnswers = 0;
+        final int arraySize = 10;
+        final int arraySizeMin = 5;
+        final int randomStepMin = 2;
+        final int countToWin = 3;
         System.out.println("Hello, " + name + "!");
         System.out.println("What number is missing in the progression?");
-        while (indexRightAnswers < 3) {
+        while (indexRightAnswers < countToWin) {
             Random random = new Random();
-            int arrayLength = random.nextInt(10) + 5;
+            int arrayLength = random.nextInt(arraySize) + arraySizeMin;
             int[] numbers = new int[arrayLength];
             int questionIndex = random.nextInt(arrayLength);
-            int randomStep = random.nextInt(10) + 2;
-            int randomFirstNumber = random.nextInt(10) + 1;
+            int randomStep = random.nextInt(arraySize) + randomStepMin;
+            int randomFirstNumber = random.nextInt(arraySize) + 1;
             System.out.print("Question: ");
             for (int i = 1; i < numbers.length; i++) {
                 numbers[0] = randomFirstNumber;
