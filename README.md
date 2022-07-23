@@ -5,8 +5,6 @@ https://asciinema.org/a/8C2HxmWVD5E0IWV0YKLd9oAqS
 https://asciinema.org/a/llwEvp3ZTYmH65b7eFLngpvqa
 https://asciinema.org/a/PEKW9xtNY6ZdUTPMJ7ogvWVFQ
 https://asciinema.org/a/v0GYBZjCa0Eb9awpWgVaPx1uj
-https://asciinema.org/a/exjbUCBLr3UioHYnyPAwTakDZ
-
 
 
 
