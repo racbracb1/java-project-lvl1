@@ -27,22 +27,22 @@ public class Progression {
                 numbers[0] = randomFirstNumber;
                 numbers[i] = numbers[i - 1] + randomStep;
             }
-            int[] result = Arrays.copyOfRange(numbers, 0, numbers.length);
+            //int[] result = Arrays.copyOfRange(numbers, 0, numbers.length);
             for (int j = 0; j < questionIndex; j++) {
-                System.out.print(result[j] + " ");
+                System.out.print(numbers[j] + " ");
             }
             System.out.print(".. ");
-            for (int j = questionIndex + 1; j < result.length; j++) {
-                System.out.print(result[j] + " ");
+            for (int j = questionIndex + 1; j < numbers.length; j++) {
+                System.out.print(numbers[j] + " ");
             }
             Scanner answer = new Scanner(System.in);
             System.out.print("\nYour answer: ");
             int ans = answer.nextInt();
-            if (ans == result[questionIndex]) {
+            if (ans == numbers[questionIndex]) {
                 System.out.println("Correct!");
                 indexRightAnswers++;
             } else {
-                return ans + " is wrong answer ;(. Correct answer was " + result[questionIndex] + " \nLet's try again, "
+                return ans + " is wrong answer ;(. Correct answer was " + numbers[questionIndex] + " \nLet's try again, "
                         + name + "!";
             }
         } return "Congratulations, " + name + "!";
