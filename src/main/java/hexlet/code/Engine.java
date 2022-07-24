@@ -16,12 +16,12 @@ public class Engine {
     }
     public static int randomFirstNumber() {
         final int randomTill = 100;
-        return (int) (Math.random() * randomTill);
+        return (int) (Math.random() * randomTill + 1);
     }
 
     public static int randomSecondNumber() {
         final int randomTill = 100;
-        return (int) (Math.random() * randomTill);
+        return (int) (Math.random() * randomTill + 1);
     }
 
 
