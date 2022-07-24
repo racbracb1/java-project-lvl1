@@ -32,7 +32,7 @@ public class GCD {
                 System.out.println("Correct!");
                 indexRightAnswers++;
             } else {
-                return ans + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, " + name;
+                return ans + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, " + name + "!";
             }
 
         } return "Congratulations, " + name + "!";

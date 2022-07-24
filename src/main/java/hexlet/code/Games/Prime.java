@@ -32,7 +32,7 @@ public class Prime {
                 System.out.println("Correct!");
                 indexRightAnswers++;
             } else if (!isSimple && ans.equals("yes") || isSimple && ans.equals("no")) {
-                return ans + " is wrong answer ;(. \nLet's try again, " + name;
+                return ans + " is wrong answer ;(. \nLet's try again, " + name + "!";
             }
 
         } return "Congratulations, " + name + "!";

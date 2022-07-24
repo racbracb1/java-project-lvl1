@@ -43,7 +43,7 @@ public class Progression {
                 indexRightAnswers++;
             } else {
                 return ans + " is wrong answer ;(. Correct answer was " + result[questionIndex] + " \nLet's try again, "
-                        + name;
+                        + name + "!";
             }
         } return "Congratulations, " + name + "!";
     }
