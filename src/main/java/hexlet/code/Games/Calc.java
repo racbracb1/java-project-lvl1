@@ -34,7 +34,7 @@ public class Calc {
                         indexRightAnswers++;
                     } else {
                         return ans + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, "
-                                + name;
+                                + name + "!";
                     }
                     break;
                 case 1:
@@ -49,7 +49,7 @@ public class Calc {
                         indexRightAnswers++;
                     } else {
                         return ans + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, "
-                                + name;
+                                + name + "!";
                     }
                     break;
                 case 2:
@@ -64,7 +64,7 @@ public class Calc {
                         indexRightAnswers++;
                     } else {
                         return ans + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, "
-                                + name;
+                                + name + "!";
                     }
                     break;
                 default:
