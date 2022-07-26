@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.37">
-<file name="/Users/racb/Documents/src/main/java/hexlet/code/App.java">
+<file name="/Users/racb/Documents/app/src/main/java/hexlet/code/App.java">
+<error line="3" column="25" severity="error" message="Using the &apos;.*&apos; form of import should be avoided - hexlet.code.Games.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
+<error line="30" column="18" severity="error" message="&apos;3&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="31" column="18" severity="error" message="&apos;4&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="32" column="18" severity="error" message="&apos;5&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="33" column="18" severity="error" message="&apos;6&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
+<error line="35" column="13" severity="error" message="&apos;switch rcurly&apos; has incorrect indentation level 12, expected level should be 8." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="36" column="9" severity="error" message="&apos;method def rcurly&apos; has incorrect indentation level 8, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="37" column="5" severity="error" message="&apos;class def rcurly&apos; has incorrect indentation level 4, expected level should be 0." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
 </file>
-<file name="/Users/racb/Documents/src/main/java/hexlet/code/Cli.java">
+<file name="/Users/racb/Documents/app/src/main/java/hexlet/code/Cli.java">
 </file>
-<file name="/Users/racb/Documents/src/main/java/hexlet/code/Engine.java">
+<file name="/Users/racb/Documents/app/src/main/java/hexlet/code/Engine.java">
 </file>
-<file name="/Users/racb/Documents/src/main/java/hexlet/code/Games/Calc.java">
+<file name="/Users/racb/Documents/app/src/main/java/hexlet/code/Games/Calc.java">
 </file>
-<file name="/Users/racb/Documents/src/main/java/hexlet/code/Games/Even.java">
+<file name="/Users/racb/Documents/app/src/main/java/hexlet/code/Games/Even.java">
 </file>
-<file name="/Users/racb/Documents/src/main/java/hexlet/code/Games/GCD.java">
+<file name="/Users/racb/Documents/app/src/main/java/hexlet/code/Games/GCD.java">
 </file>
-<file name="/Users/racb/Documents/src/main/java/hexlet/code/Games/Prime.java">
+<file name="/Users/racb/Documents/app/src/main/java/hexlet/code/Games/Prime.java">
+<error line="5" column="8" severity="error" message="Unused import - java.util.Random." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
 </file>
-<file name="/Users/racb/Documents/src/main/java/hexlet/code/Games/Progression.java">
+<file name="/Users/racb/Documents/app/src/main/java/hexlet/code/Games/Progression.java">
+<error line="45" column="98" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
 </file>
 </checkstyle>

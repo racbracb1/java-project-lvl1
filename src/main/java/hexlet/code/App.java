@@ -6,6 +6,12 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+        final int startEvenGame = 2;
+        final int startCalcGame = 3;
+        final int startGcdGame = 4;
+        final int startProgressionGame = 5;
+        final int startPrimeGame = 6;
+        System.out.println("Welcome to the Brain Games!");
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
@@ -25,6 +31,7 @@ public class App {
             case 4 -> System.out.println(GCD.divisor());
             case 5 -> System.out.println(Progression.progression());
             case 6 -> System.out.println(Prime.prime());
+            default -> System.out.println(" ");
             }
         }
     }
