@@ -29,6 +29,7 @@ public class App {
         int gameChoosed;
         gameChoosed = gameChoose.nextInt();
         switch (gameChoosed) {
+
             case 1 -> {
                 System.out.println(Cli.greeting());
             }

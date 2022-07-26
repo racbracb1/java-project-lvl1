@@ -45,8 +45,7 @@ public class Calc {
                 System.out.println("Correct!");
                 indexRightAnswers++;
             } else {
-                return ans + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, "
-                        + name + "!";
+                return Engine.calcLoose(ans, example, name);
             }
         } return "Congratulations, " + name + "!";
     }

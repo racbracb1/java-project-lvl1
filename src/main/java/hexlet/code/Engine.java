@@ -18,5 +18,16 @@ public class Engine {
         return (int) (Math.random() * randomTill + 1);
     }
 
-
+    public static String calcLoose(int answer, int example, String name) {
+        return answer + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, "
+                + name + "!";
+    }
+    public static String gcdLoose(int answer, int example, String name) {
+        return answer + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, "
+                + name + "!";
+    }
+    public static String progressionLoose(int answer, int number, String name) {
+        return answer + " is wrong answer ;(. Correct answer was " + number + " \nLet's try again, "
+                + name + "!";
+    }
 }
