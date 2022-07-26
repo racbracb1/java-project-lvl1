@@ -12,14 +12,14 @@ public class Prime {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         while (indexRightAnswers < countToWin) {
             boolean isSimple = true;
-            var randomNumber = Engine.randomNumber();
+            //var randomNumber = Engine.randomNumber();
             Scanner answer = new Scanner(System.in);
-            System.out.println("Question: " + randomNumber);
-            System.out.println("Your answer: ");
+            System.out.println("Question: " + Engine.randomNumber() + "\nYour answer: ");
+            //System.out.println("Your answer: ");
             String ans = answer.nextLine();
             int i = 2;
-            while (i <= randomNumber / 2) {
-                if (randomNumber % i == 0) {
+            while (i <= Engine.randomNumber() / 2) {
+                if (Engine.randomNumber() % i == 0) {
                     isSimple = false;
                     break;
                 }
