@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.Games.*;
+import hexlet.code.Games.Prime;
+import hexlet.code.Games.Calc;
+import hexlet.code.Games.Even;
+import hexlet.code.Games.GCD;
+import hexlet.code.Games.Progression;
 
 import java.util.Scanner;
 
@@ -28,12 +32,24 @@ public class App {
             case 1 -> {
                 System.out.println(Cli.greeting());
             }
-            case 2 -> System.out.println(Even.parityCheck());
-            case 3 -> System.out.println(Calc.calculate());
-            case 4 -> System.out.println(GCD.divisor());
-            case 5 -> System.out.println(Progression.progression());
-            case 6 -> System.out.println(Prime.prime());
-            default -> System.out.println(" ");
+            case 2 -> {
+                System.out.println(Even.parityCheck());
+            }
+            case 3 -> {
+                System.out.println(Calc.calculate());
+            }
+            case 4 -> {
+                System.out.println(GCD.divisor());
+            }
+            case 5 -> {
+                System.out.println(Progression.progression());
+            }
+            case 6 -> {
+                System.out.println(Prime.prime());
+            }
+            default -> {
+                System.out.println(" ");
+            }
             }
         }
     }
