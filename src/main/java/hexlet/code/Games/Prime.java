@@ -17,7 +17,6 @@ public class Prime {
             System.out.println("Question: " + randomNumber);
             System.out.println("Your answer: ");
             String ans = answer.nextLine();
-
             int i = 2;
             while (i <= randomNumber / 2) {
                 if (randomNumber % i == 0) {
