@@ -9,12 +9,13 @@ import hexlet.code.Games.Progression;
 import java.util.Scanner;
 
 public class App {
+    static final int CHOICE_CLI = 1;
+    static final int CHOICE_EVEN = 2;
+    static final int CHOICE_CALC = 3;
+    static final int CHOICE_GCD = 4;
+    static final int CHOICE_PROGRESSION = 5;
+    static final int CHOICE_PRIME = 6;
     public static void main(String[] args) {
-        final int startEvenGame = 2;
-        final int startCalcGame = 3;
-        final int startGcdGame = 4;
-        final int startProgressionGame = 5;
-        final int startPrimeGame = 6;
         System.out.println("Welcome to the Brain Games!");
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -26,32 +27,30 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
         Scanner gameChoose = new Scanner(System.in);
-        int gameChoosed;
-        gameChoosed = gameChoose.nextInt();
+        int gameChoosed = gameChoose.nextInt();
         switch (gameChoosed) {
-
-            case 1 -> {
+            case CHOICE_CLI -> {
                 System.out.println(Cli.greeting());
             }
-            case 2 -> {
+            case CHOICE_EVEN -> {
                 System.out.println(Even.parityCheck());
             }
-            case 3 -> {
+            case CHOICE_CALC -> {
                 System.out.println(Calc.calculate());
             }
-            case 4 -> {
+            case CHOICE_GCD -> {
                 System.out.println(GCD.divisor());
             }
-            case 5 -> {
+            case CHOICE_PROGRESSION -> {
                 System.out.println(Progression.progression());
             }
-            case 6 -> {
+            case CHOICE_PRIME -> {
                 System.out.println(Prime.prime());
             }
             default -> {
                 System.out.println(" ");
             }
-            }
         }
     }
+}
 
