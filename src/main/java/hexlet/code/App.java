@@ -25,7 +25,9 @@ public class App {
         int gameChoosed;
         gameChoosed = gameChoose.nextInt();
         switch (gameChoosed) {
-            case 1 -> System.out.println(Cli.greeting());
+            case 1 -> {
+                System.out.println(Cli.greeting());
+            }
             case 2 -> System.out.println(Even.parityCheck());
             case 3 -> System.out.println(Calc.calculate());
             case 4 -> System.out.println(GCD.divisor());

@@ -2,7 +2,6 @@ package hexlet.code.Games;
 
 import hexlet.code.Engine;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Prime {

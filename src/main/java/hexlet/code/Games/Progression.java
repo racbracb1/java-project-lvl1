@@ -42,8 +42,8 @@ public class Progression {
                 System.out.println("Correct!");
                 indexRightAnswers++;
             } else {
-                return ans + " is wrong answer ;(. Correct answer was " + numbers[questionIndex] +
-                        " \nLet's try again, " + name + "!";
+                return ans + " is wrong answer ;(. Correct answer was " + numbers[questionIndex]
+                        + " \nLet's try again, " + name + "!";
             }
         } return "Congratulations, " + name + "!";
     }
