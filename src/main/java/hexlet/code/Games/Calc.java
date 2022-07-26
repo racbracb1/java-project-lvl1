@@ -12,8 +12,8 @@ public class Calc {
         final int countToWin = 3;
         int indexRightAnswers = 0;
         while (indexRightAnswers < countToWin) {
-            var firstNumber = Engine.randomFirstNumber();
-            var secondNumber = Engine.randomSecondNumber();
+            var firstNumber = Engine.randomNumber();
+            var secondNumber = Engine.randomNumber();
             var firstNumberString = Integer.toString(firstNumber);
             var secondNumberString = Integer.toString(secondNumber);
             char operChar = ' ';

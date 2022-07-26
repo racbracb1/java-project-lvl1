@@ -5,21 +5,15 @@ import java.util.Scanner;
 public class Engine {
 
     public static String gameGreeting() {
+        Scanner nameUser = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
-        Scanner userName = new Scanner(System.in);
-        String name;
-        name = userName.nextLine();
+        String name = nameUser.nextLine();
         System.out.println("Hello, " + name + "!");
         return name;
-
-    }
-    public static int randomFirstNumber() {
-        final int randomTill = 100;
-        return (int) (Math.random() * randomTill + 1);
     }
 
-    public static int randomSecondNumber() {
+    public static int randomNumber() {
         final int randomTill = 100;
         return (int) (Math.random() * randomTill + 1);
     }

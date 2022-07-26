@@ -12,8 +12,8 @@ public class GCD {
         var name = Engine.gameGreeting();
         System.out.println("Find the greatest common divisor of given numbers.");
         while (indexRightAnswers < countToWin) {
-            var firstNumber = Engine.randomFirstNumber();
-            var secondNumber = Engine.randomSecondNumber();
+            var firstNumber = Engine.randomNumber();
+            var secondNumber = Engine.randomNumber();
             var firstNumberString = Integer.toString(firstNumber);
             var secondNumberString = Integer.toString(secondNumber);
             int gcd = 1;

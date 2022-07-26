@@ -23,21 +23,14 @@ public class App {
         Scanner gameChoose = new Scanner(System.in);
         int gameChoosed;
         gameChoosed = gameChoose.nextInt();
-        if (gameChoosed == 1) {
-            System.out.println("Welcome to the Brain Games!");
-            System.out.println("May I have your name?");
-            System.out.println(Cli.greeting());
-        } else if (gameChoosed == startEvenGame) {
-            System.out.println(Even.parityCheck());
-        } else if (gameChoosed == startCalcGame) {
-            System.out.println(Calc.calculate());
-        } else if (gameChoosed == startGcdGame) {
-            System.out.println(GCD.divisor());
-        } else if (gameChoosed == startProgressionGame) {
-            System.out.println(Progression.progression());
-        } else if (gameChoosed == startPrimeGame) {
-            System.out.println(Prime.prime());
-
+        switch (gameChoosed) {
+            case 1 -> System.out.println(Cli.greeting());
+            case 2 -> System.out.println(Even.parityCheck());
+            case 3 -> System.out.println(Calc.calculate());
+            case 4 -> System.out.println(GCD.divisor());
+            case 5 -> System.out.println(Progression.progression());
+            case 6 -> System.out.println(Prime.prime());
+            }
         }
     }
-}
+

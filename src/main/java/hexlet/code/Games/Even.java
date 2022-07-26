@@ -12,7 +12,7 @@ public class Even {
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
         int indexRightAnswers = 0;
         while (indexRightAnswers < countToWin) {
-            int randomNumber = Engine.randomFirstNumber();
+            int randomNumber = Engine.randomNumber();
             System.out.println("Question: " + randomNumber);
             System.out.println("Your anwser: ");
             Scanner answer = new Scanner(System.in);
