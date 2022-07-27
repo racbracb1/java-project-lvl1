@@ -12,14 +12,19 @@ public class GCD {
         var name = Engine.gameGreeting();
         System.out.println("Find the greatest common divisor of given numbers.");
         while (indexRightAnswers < countToWin) {
+            var firstNumber = Engine.randomNumber();
+            var secondNumber = Engine.randomNumber();
+            var firstNumberString = Integer.toString(firstNumber);
+            var secondNumberString = Integer.toString(secondNumber);
             int gcd = 1;
             for (int i = 1; i <= Engine.randomNumber() && i <= Engine.randomNumber(); i++) {
-                if (Engine.randomNumber() % i == 0 && Engine.randomNumber() % i == 0) {
+                if (firstNumber % i == 0 && secondNumber % i == 0) {
                     gcd = i;
                 }
             }
             example = gcd;
-            System.out.println("Question: " + Engine.randomNumber() + " " + Engine.randomNumber());
+
+            System.out.println("Question: " + firstNumberString + " " + secondNumberString);
             System.out.println("Your answer: ");
             Scanner answer = new Scanner(System.in);
             int ans = answer.nextInt();
