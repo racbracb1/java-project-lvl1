@@ -24,22 +24,22 @@ public class App {
         int gameChoosed = gameChoose.nextInt();
         switch (gameChoosed) {
             case CHOICE_CLI -> {
-                System.out.println(Cli.greeting());
+                Cli.greeting();
             }
             case CHOICE_EVEN -> {
-                System.out.println(Even.parityCheck());
+                Even.parityCheck();
             }
             case CHOICE_CALC -> {
-                System.out.println(Calc.calculate());
+                Calc.calculate();
             }
             case CHOICE_GCD -> {
-                System.out.println(GCD.divisor());
+                GCD.divisor();
             }
             case CHOICE_PROGRESSION -> {
-                System.out.println(Progression.progression());
+                Progression.progression();
             }
             case CHOICE_PRIME -> {
-                System.out.println(Prime.prime());
+                Prime.prime();
             }
             default -> {
                 System.out.println(" ");

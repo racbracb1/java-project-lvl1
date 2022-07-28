@@ -8,11 +8,13 @@ import java.util.Scanner;
 
 public class Calc {
     static final String[] OPERATORS = new String[] {"+", "-", "*"};
+
     public static String calculate() {
         var name = Engine.gameGreeting();
         System.out.println("What is the result of the expression?");
         final int countToWin = 3;
         int indexRightAnswers = 0;
+
         while (indexRightAnswers < countToWin) {
             var firstNumber = Utils.randomNumber();
             var secondNumber = Utils.randomNumber();

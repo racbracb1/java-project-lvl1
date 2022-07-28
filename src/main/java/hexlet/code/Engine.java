@@ -13,6 +13,8 @@ public class Engine {
         return name;
     }
 
+    //public static int calculate(int firstNumber, int secondNumber, String op);
+
     public static String calcLoose(int answer, int example, String name) {
         return answer + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, "
                 + name + "!";
