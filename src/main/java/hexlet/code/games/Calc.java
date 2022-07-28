@@ -6,6 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Calc {
+    static final String[] OPERATORS = new String[] {"+", "-", "*"};
     public static String calculate() {
         var name = Engine.gameGreeting();
         System.out.println("What is the result of the expression?");
@@ -19,18 +20,16 @@ public class Calc {
             char operChar = ' ';
             int example = 0;
             Random random = new Random();
-            final int currentOperator = random.nextInt(3);
-
-            switch (currentOperator) {
-                case 0 -> {
+            switch (OPERATORS[random.nextInt(OPERATORS.length)]) {
+                case "+" -> {
                     example = firstNumber + secondNumber;
                     operChar = '+';
                 }
-                case 1 -> {
+                case "-" -> {
                     example = firstNumber - secondNumber;
                     operChar = '-';
                 }
-                case 2 -> {
+                case "*" -> {
                     example = firstNumber * secondNumber;
                     operChar = '*';
                 }
