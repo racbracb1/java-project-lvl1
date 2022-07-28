@@ -44,7 +44,7 @@ public class App {
             default -> {
                 System.out.println(" ");
             }
-        }gameChoose.close();
+        } gameChoose.close();
     }
 }
 
