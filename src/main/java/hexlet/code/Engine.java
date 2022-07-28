@@ -13,11 +13,6 @@ public class Engine {
         return name;
     }
 
-    public static int randomNumber() {
-        final int randomTill = 100;
-        return (int) (Math.random() * randomTill + 1);
-    }
-
     public static String calcLoose(int answer, int example, String name) {
         return answer + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, "
                 + name + "!";

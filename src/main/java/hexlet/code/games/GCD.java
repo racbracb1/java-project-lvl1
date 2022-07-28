@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.Scanner;
 
@@ -12,8 +13,8 @@ public class GCD {
         var name = Engine.gameGreeting();
         System.out.println("Find the greatest common divisor of given numbers.");
         while (indexRightAnswers < countToWin) {
-            var firstNumber = Engine.randomNumber();
-            var secondNumber = Engine.randomNumber();
+            var firstNumber = Utils.randomNumber();
+            var secondNumber = Utils.randomNumber();
             var firstNumberString = Integer.toString(firstNumber);
             var secondNumberString = Integer.toString(secondNumber);
             int gcd = 1;

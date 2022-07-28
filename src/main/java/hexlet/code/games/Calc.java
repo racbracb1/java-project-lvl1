@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -13,13 +14,13 @@ public class Calc {
         final int countToWin = 3;
         int indexRightAnswers = 0;
         while (indexRightAnswers < countToWin) {
-            var firstNumber = Engine.randomNumber();
-            var secondNumber = Engine.randomNumber();
+            var firstNumber = Utils.randomNumber();
+            var secondNumber = Utils.randomNumber();
             var firstNumberString = Integer.toString(firstNumber);
             var secondNumberString = Integer.toString(secondNumber);
-            char operChar = ' ';
-            int example = 0;
             Random random = new Random();
+            char operChar;
+            int example;
             switch (OPERATORS[random.nextInt(OPERATORS.length)]) {
                 case "+" -> {
                     example = firstNumber + secondNumber;
@@ -34,6 +35,7 @@ public class Calc {
                     operChar = '*';
                 }
                 default -> {
+                    return "For operator / no logic in Calc game";
                 }
             }
             System.out.println("Question: " + firstNumberString + " " + operChar + " " + secondNumberString);
