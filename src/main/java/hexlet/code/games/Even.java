@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 
 public class Even {
-    public static String parityCheck() {
+    public static void parityCheck() {
         var name = Engine.gameGreeting();
         final int countToWin = 3;
         System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
@@ -22,13 +22,13 @@ public class Even {
                 System.out.println("Correct!");
                 indexRightAnswers++;
             } else if ((randomNumber % 2 == 0 && ans.equals("no"))) {
-                return "Answer '" + ans + "' is wrong answer ;(. Correct answer was " + "'yes'."
-                        + " \nLet's try again, " + name + "!";
+                System.out.println("Answer '" + ans + "' is wrong answer ;(. Correct answer was " + "'yes'."
+                        + " \nLet's try again, " + name + "!");
             } else if (randomNumber % 2 != 0 && ans.equals("yes")) {
-                return "Answer '" + ans + "' is wrong answer ;(. Correct answer was " + "'no'."
-                        + " \nLet's try again, " + name + "!";
+                System.out.println("Answer '" + ans + "' is wrong answer ;(. Correct answer was " + "'no'."
+                        + " \nLet's try again, " + name + "!");
             }
         }
-        return "Congratulations, " + name + "!";
+        System.out.println("Congratulations, " + name + "!");
     }
 }
