@@ -24,7 +24,6 @@ public class GCD {
                 }
             }
             example = gcd;
-
             System.out.println("Question: " + firstNumberString + " " + secondNumberString);
             System.out.println("Your answer: ");
             Scanner answer = new Scanner(System.in);
@@ -39,7 +38,7 @@ public class GCD {
 
         }
         if (indexRightAnswers == countToWin) {
-            System.out.println("Congratulations, " + name + "!");
+            Engine.seeYou(name);
         }
     }
 }

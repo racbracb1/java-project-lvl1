@@ -46,7 +46,7 @@ public class Progression {
             }
         }
         if (indexRightAnswers == countToWin) {
-            System.out.println("Congratulations, " + name + "!");
+            Engine.seeYou(name);
         }
     }
 }

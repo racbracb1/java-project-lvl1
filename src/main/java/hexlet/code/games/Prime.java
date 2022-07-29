@@ -35,8 +35,7 @@ public class Prime {
 
         }
         if (indexRightAnswers == countToWin) {
-            System.out.println("Congratulations, " + name + "!");
-
+            Engine.seeYou(name);
         }
     }
 }

@@ -52,7 +52,7 @@ public class Calc {
                 break;
             }
         } if (indexRightAnswers == countToWin) {
-            System.out.println("Congratulations, " + name + "!");
+            Engine.seeYou(name);
         }
     }
 }
