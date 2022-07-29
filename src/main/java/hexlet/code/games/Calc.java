@@ -49,8 +49,11 @@ public class Calc {
                 indexRightAnswers++;
             } else {
                 System.out.println(Engine.calcLoose(ans, example, name));
+                break;
             }
-        } System.out.println("Congratulations, " + name + "!");
+        } if (indexRightAnswers == countToWin) {
+            System.out.println("Congratulations, " + name + "!");
+        }
     }
 }
 
