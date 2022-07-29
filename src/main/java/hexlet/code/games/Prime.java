@@ -6,7 +6,7 @@ import hexlet.code.Utils;
 import java.util.Scanner;
 
 public class Prime {
-    public static String prime() {
+    public static void prime() {
         var name = Engine.gameGreeting();
         final int countToWin = 3;
         var randomNumber = Utils.randomNumber();
@@ -16,7 +16,6 @@ public class Prime {
             boolean isSimple = true;
             Scanner answer = new Scanner(System.in);
             System.out.println("Question: " + randomNumber + "\nYour answer: ");
-            //System.out.println("Your answer: ");
             String ans = answer.nextLine();
             int i = 2;
             while (i <= randomNumber / 2) {
@@ -30,10 +29,14 @@ public class Prime {
                 System.out.println("Correct!");
                 indexRightAnswers++;
             } else if (!isSimple && ans.equals("yes") || isSimple && ans.equals("no")) {
-                return ans + " is wrong answer ;(. \nLet's try again, " + name + "!";
+                System.out.println(ans + " is wrong answer ;(. \nLet's try again, " + name + "!");
+                break;
             }
 
-        } return "Congratulations, " + name + "!";
+        }
+        if (indexRightAnswers == countToWin) {
+            System.out.println("Congratulations, " + name + "!");
 
+        }
     }
 }

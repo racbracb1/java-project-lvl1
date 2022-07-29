@@ -7,7 +7,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Progression {
-    public static String progression() {
+    public static void progression() {
         var name = Engine.gameGreeting();
         int indexRightAnswers = 0;
         final int arraySize = 10;
@@ -41,9 +41,13 @@ public class Progression {
                 System.out.println("Correct!");
                 indexRightAnswers++;
             } else {
-                return Engine.progressionLoose(ans, numbers[questionIndex], name);
+                System.out.println(Engine.progressionLoose(ans, numbers[questionIndex], name));
+                break;
             }
-        } return "Congratulations, " + name + "!";
+        }
+        if (indexRightAnswers == countToWin) {
+            System.out.println("Congratulations, " + name + "!");
+        }
     }
 }
 

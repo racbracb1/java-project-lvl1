@@ -6,7 +6,7 @@ import hexlet.code.Utils;
 import java.util.Scanner;
 
 public class GCD {
-    public static String divisor() {
+    public static void divisor() {
         int example;
         int indexRightAnswers = 0;
         final int countToWin = 3;
@@ -33,10 +33,14 @@ public class GCD {
                 System.out.println("Correct!");
                 indexRightAnswers++;
             } else {
-                return Engine.gcdLoose(ans, example, name);
+                System.out.println(Engine.gcdLoose(ans, example, name));
+                break;
             }
 
-        } return "Congratulations, " + name + "!";
+        }
+        if (indexRightAnswers == countToWin) {
+            System.out.println("Congratulations, " + name + "!");
+        }
     }
 }
 
