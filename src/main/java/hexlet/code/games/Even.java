@@ -24,11 +24,15 @@ public class Even {
             } else if ((randomNumber % 2 == 0 && ans.equals("no"))) {
                 System.out.println("Answer '" + ans + "' is wrong answer ;(. Correct answer was " + "'yes'."
                         + " \nLet's try again, " + name + "!");
+                break;
             } else if (randomNumber % 2 != 0 && ans.equals("yes")) {
                 System.out.println("Answer '" + ans + "' is wrong answer ;(. Correct answer was " + "'no'."
                         + " \nLet's try again, " + name + "!");
+                break;
             }
         }
-        System.out.println("Congratulations, " + name + "!");
+        if (indexRightAnswers == countToWin) {
+            System.out.println("Congratulations, " + name + "!");
+        }
     }
 }
