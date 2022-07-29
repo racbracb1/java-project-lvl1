@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Calc {
     static final String[] OPERATORS = new String[] {"+", "-", "*"};
 
-    public static String calculate() {
+    public static void calculate() {
         var name = Engine.gameGreeting();
         System.out.println("What is the result of the expression?");
         final int countToWin = 3;
@@ -21,8 +21,8 @@ public class Calc {
             var firstNumberString = Integer.toString(firstNumber);
             var secondNumberString = Integer.toString(secondNumber);
             Random random = new Random();
-            char operChar;
-            int example;
+            char operChar = ' ';
+            int example = 0;
             switch (OPERATORS[random.nextInt(OPERATORS.length)]) {
                 case "+" -> {
                     example = firstNumber + secondNumber;
@@ -37,7 +37,7 @@ public class Calc {
                     operChar = '*';
                 }
                 default -> {
-                    return "For operator / no logic in Calc game";
+                    System.out.println("For operator / no logic in Calc game");
                 }
             }
             System.out.println("Question: " + firstNumberString + " " + operChar + " " + secondNumberString);
@@ -48,9 +48,9 @@ public class Calc {
                 System.out.println("Correct!");
                 indexRightAnswers++;
             } else {
-                return Engine.calcLoose(ans, example, name);
+                System.out.println(Engine.calcLoose(ans, example, name));
             }
-        } return "Congratulations, " + name + "!";
+        } System.out.println("Congratulations, " + name + "!");
     }
 }
 
