@@ -2,7 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Prime;
 import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
+import hexlet.code.games.Even2;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
 
@@ -27,7 +27,7 @@ public class App {
                 Cli.greeting();
             }
             case CHOICE_EVEN -> {
-                Even.parityCheck();
+                Even2.parityCheck();
             }
             case CHOICE_CALC -> {
                 Calc.calculate();
@@ -42,7 +42,7 @@ public class App {
                 Prime.prime();
             }
             default -> {
-                System.out.println(" ");
+                System.out.println("You entered wrond number");
             }
         } gameChoose.close();
     }

@@ -11,7 +11,8 @@ public class Calc {
 
     public static void calculate() {
         var name = Engine.gameGreeting();
-        System.out.println("What is the result of the expression?");
+        //var rule = Engine.gameRule("What is the result of the expression?");
+        // System.out.println("What is the result of the expression?");
         final int countToWin = 3;
         int indexRightAnswers = 0;
 
@@ -55,6 +56,8 @@ public class Calc {
             Engine.seeYou(name);
         }
     }
+
+    //public static int calculating(int fi)
 }
 
 
