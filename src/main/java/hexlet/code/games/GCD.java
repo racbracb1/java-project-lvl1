@@ -3,44 +3,32 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Scanner;
+
 
 public class GCD {
-    public static void divisor() {
-        int example;
-        int indexRightAnswers = 0;
-        final int countToWin = 3;
-        var name = Engine.gameGreeting();
-        System.out.println("Find the greatest common divisor of given numbers.");
-        while (indexRightAnswers < countToWin) {
-            var firstNumber = Utils.randomNumber();
-            var secondNumber = Utils.randomNumber();
-            var firstNumberString = Integer.toString(firstNumber);
-            var secondNumberString = Integer.toString(secondNumber);
-            int gcd = 1;
-            for (int i = 1; i <= firstNumber && i <= secondNumber; i++) {
-                if (firstNumber % i == 0 && secondNumber % i == 0) {
-                    gcd = i;
-                }
-            }
-            example = gcd;
-            System.out.println("Question: " + firstNumberString + " " + secondNumberString);
-            System.out.println("Your answer: ");
-            Scanner answer = new Scanner(System.in);
-            int ans = answer.nextInt();
-            if (ans == example) {
-                System.out.println("Correct!");
-                indexRightAnswers++;
-            } else {
-                System.out.println(Engine.gcdLoose(ans, example, name));
-                break;
-            }
+    private static String question = "Find the greatest common divisor of given numbers.";
 
+    public static void divisor() {
+        Engine.gameEngine(question, gameData());
+    }
+    public static String[][] gameData() {
+        String[][] answersAndQuestions = new String[Engine.COUNT_TO_WIN][2];
+        for (int i = 0; i < Engine.COUNT_TO_WIN; i++) {
+            int firstNumber = Utils.randomNumber();
+            int secondNumber = Utils.randomNumber();
+
+            answersAndQuestions[i][0] = firstNumber + " " + secondNumber;
+            answersAndQuestions[i][1] = String.valueOf(gcd(firstNumber, secondNumber));
         }
-        if (indexRightAnswers == countToWin) {
-            Engine.seeYou(name);
-        }
+        return answersAndQuestions;
+    }
+
+    public static int gcd(int firstNumber, int secondNumber) {
+        int gcd = 1;
+        for (int i = 1; i <= firstNumber && i <= secondNumber; i++) {
+            if (firstNumber % i == 0 && secondNumber % i == 0) {
+                gcd = i;
+            }
+        } return gcd;
     }
 }
-
-

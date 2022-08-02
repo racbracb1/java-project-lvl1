@@ -3,36 +3,25 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Scanner;
 
 
 public class Even {
+    private static String question = "Answer 'yes' if number even otherwise answer 'no'.";
+
     public static void parityCheck() {
-        var name = Engine.gameGreeting();
-        final int countToWin = 3;
-        System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
-        int indexRightAnswers = 0;
-        while (indexRightAnswers < countToWin) {
-            int randomNumber = Utils.randomNumber();
-            System.out.println("Question: " + randomNumber);
-            System.out.println("Your anwser: ");
-            Scanner answer = new Scanner(System.in);
-            String ans = answer.nextLine();
-            if ((randomNumber % 2 == 0 && ans.equals("yes")) || (randomNumber % 2 != 0 && ans.equals("no"))) {
-                System.out.println("Correct!");
-                indexRightAnswers++;
-            } else if ((randomNumber % 2 == 0 && ans.equals("no"))) {
-                System.out.println("Answer '" + ans + "' is wrong answer ;(. Correct answer was " + "'yes'."
-                        + " \nLet's try again, " + name + "!");
-                break;
-            } else if (randomNumber % 2 != 0 && ans.equals("yes")) {
-                System.out.println("Answer '" + ans + "' is wrong answer ;(. Correct answer was " + "'no'."
-                        + " \nLet's try again, " + name + "!");
-                break;
-            }
-        }
-        if (indexRightAnswers == countToWin) {
-            Engine.seeYou(name);
-        }
+        Engine.gameEngine(question, gameData());
+    }
+    public static String[][] gameData() {
+
+        String[][] answersAndQuestions = new String[Engine.COUNT_TO_WIN][2];
+        for (int i = 0; i < Engine.COUNT_TO_WIN; i++) {
+            int number = Utils.randomNumber();
+            answersAndQuestions[i][0] = String.valueOf(number);
+            answersAndQuestions[i][1] = isEven(number) ? "yes" : "no";
+        } return answersAndQuestions;
+    }
+
+    public static boolean isEven(int number) {
+        return (number % 2 == 0);
     }
 }
