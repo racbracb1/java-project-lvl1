@@ -12,10 +12,12 @@ public class Even2 {
         Engine.gameEngine(question, gameData());
     }
     public static String[][] gameData() {
+
         String[][] answersAndQuestions = new String[Engine.COUNT_TO_WIN][2];
         for (int i = 0; i < Engine.COUNT_TO_WIN; i++) {
-            answersAndQuestions[i][0] = String.valueOf(Utils.randomNumber());
-            answersAndQuestions[i][1] = isEven(Utils.randomNumber()) ? "yes" : "no";
+            int number = Utils.randomNumber();
+            answersAndQuestions[i][0] = String.valueOf(number);
+            answersAndQuestions[i][1] = isEven(number) ? "yes" : "no";
         } return answersAndQuestions;
     }
 
