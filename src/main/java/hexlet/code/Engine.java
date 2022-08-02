@@ -14,11 +14,7 @@ public class Engine {
         return name;
     }
 
-    public static void gameRule(String rule) {
-        System.out.println(rule);
-    }
-
-    public static void gameEngine(String question, int example, String rightAnswer) {
+    public static void gameEngine(String question, String[][]answersAndQuestions) {
         Scanner nameUser = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
@@ -26,17 +22,14 @@ public class Engine {
         System.out.println("Hello, " + name + "!");
         System.out.println(question);
         for (int i = 0; i < COUNT_TO_WIN; i = i + 1) {
-            //int randomNumber = Utils.randomNumber();
-            System.out.println(example);
+            System.out.println("Question: " + answersAndQuestions[i][0] + answersAndQuestions[i][1]);
             System.out.println("Your answer: ");
-            System.out.println(Even2.getRightAnswer());
-            System.out.println(i);
             Scanner ans = new Scanner(System.in);
             String answer = ans.nextLine();
-            if (answer.equals(Even2.getRightAnswer())) {
+            if (answer.equals(answersAndQuestions[i][1])) {
                 System.out.println("Correct");
             } else {
-                System.out.println(answer + " is wrong answer ;(. Correct answer was " + rightAnswer +
+                System.out.println(answer + " is wrong answer ;(. Correct answer was " + answersAndQuestions[i][1] +
                         " \nLet's try again, " + name + "!!!!");
                 return;
             }
