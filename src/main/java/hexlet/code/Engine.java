@@ -1,7 +1,7 @@
 package hexlet.code;
 
 import java.util.Scanner;
-import hexlet.code.games.Even2;
+
 
 public class Engine {
     public static final int COUNT_TO_WIN = 3;
@@ -29,8 +29,8 @@ public class Engine {
             if (answer.equals(answersAndQuestions[i][1])) {
                 System.out.println("Correct");
             } else {
-                System.out.println(answer + " is wrong answer ;(. Correct answer was " + answersAndQuestions[i][1] +
-                        " \nLet's try again, " + name + "!");
+                System.out.println(answer + " is wrong answer ;(. Correct answer was " + answersAndQuestions[i][1]
+                        + " \nLet's try again, " + name + "!");
                 return;
             }
 

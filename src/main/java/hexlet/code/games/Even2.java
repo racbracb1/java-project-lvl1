@@ -6,7 +6,7 @@ import hexlet.code.Utils;
 
 
 public class Even2 {
-    static String question = "Answer 'yes' if number even otherwise answer 'no'.";
+    private static String question = "Answer 'yes' if number even otherwise answer 'no'.";
 
     public static void parityCheck() {
         Engine.gameEngine(question, gameData());

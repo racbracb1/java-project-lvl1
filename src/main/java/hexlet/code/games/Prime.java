@@ -6,7 +6,7 @@ import hexlet.code.Utils;
 import java.util.Scanner;
 
 public class Prime {
-    public static String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static void prime() {
         var name = Engine.gameGreeting();
         final int countToWin = 3;

@@ -6,7 +6,7 @@ import hexlet.code.Utils;
 
 
 public class Prime2 {
-    static String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void prime() {
         Engine.gameEngine(question, gameData());
