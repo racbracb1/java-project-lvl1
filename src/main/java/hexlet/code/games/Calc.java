@@ -24,12 +24,12 @@ public class Calc {
     }
 
     public static int calc(int numberOne, char operChar, int numberTwo) {
-        int rightAnswer =  switch (operChar) {
+        return switch (operChar) {
             case '+' -> numberOne + numberOne;
             case '-' -> numberOne - numberTwo;
             case '*' -> numberOne * numberTwo;
             default -> throw new RuntimeException("Operation " + "'" + "'" + " defined");
-        }; return rightAnswer;
+        };
     }
 }
 
