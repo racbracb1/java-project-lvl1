@@ -26,6 +26,7 @@ public class Progression {
             for (int i = 1; i < numbers.length; i++) {
                 numbers[0] = randomFirstNumber;
                 numbers[i] = numbers[i - 1] + randomStep;
+                numbers[questionIndex] = Integer.parseInt(".. ");
             }
             for (int j = 0; j < questionIndex; j++) {
                 System.out.print(numbers[j] + " ");

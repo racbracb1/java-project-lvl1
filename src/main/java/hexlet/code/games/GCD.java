@@ -16,7 +16,6 @@ public class GCD {
         for (int i = 0; i < Engine.COUNT_TO_WIN; i++) {
             int firstNumber = Utils.randomNumber();
             int secondNumber = Utils.randomNumber();
-
             answersAndQuestions[i][0] = firstNumber + " " + secondNumber;
             answersAndQuestions[i][1] = String.valueOf(gcd(firstNumber, secondNumber));
         }

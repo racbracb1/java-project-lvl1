@@ -21,7 +21,7 @@ public class Engine {
         String name = nameUser.nextLine();
         System.out.println("Hello, " + name + "!");
         System.out.println(question);
-        for (int i = 0; i < COUNT_TO_WIN; i = i + 1) {
+        for (int i = 0; i < COUNT_TO_WIN; i++) {
             System.out.println("Question: " + answersAndQuestions[i][0]);
             System.out.println("Your answer: ");
             Scanner ans = new Scanner(System.in);
@@ -41,10 +41,7 @@ public class Engine {
         return answer + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, "
                 + name + "!";
     }
-    public static String gcdLoose(int answer, int example, String name) {
-        return answer + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, "
-                + name + "!";
-    }
+
     public static String progressionLoose(int answer, int number, String name) {
         return answer + " is wrong answer ;(. Correct answer was " + number + " \nLet's try again, "
                 + name + "!";
