@@ -5,10 +5,10 @@ import hexlet.code.Utils;
 
 
 public class Calc {
-    private static String question = "What is the result of the expression?";
     static final char[] OPERATORS = new char[] {'+', '-', '*'};
 
     public static void calculate() {
+        String question = "What is the result of the expression?";
         Engine.gameEngine(question, gameData());
     }
     public static String[][] gameData() {
@@ -17,9 +17,8 @@ public class Calc {
             int firstNumber = Utils.randomNumber();
             int secondNumber = Utils.randomNumber();
             char operChar = OPERATORS[(int) (Math.random() * OPERATORS.length)];
-            int rightAnswer = calc(firstNumber, operChar, secondNumber);
-            answersAndQuestions[i][0] = firstNumber + " " + operChar + " " + String.valueOf(secondNumber);
-            answersAndQuestions[i][1] = String.valueOf(rightAnswer);
+            answersAndQuestions[i][0] = firstNumber + " " + operChar + " " + secondNumber;
+            answersAndQuestions[i][1] = String.valueOf(calc(firstNumber, operChar, secondNumber));
 
         } return answersAndQuestions;
     }

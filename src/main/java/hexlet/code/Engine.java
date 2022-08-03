@@ -23,7 +23,7 @@ public class Engine {
         System.out.println(question);
         for (int i = 0; i < COUNT_TO_WIN; i++) {
             System.out.println("Question: " + answersAndQuestions[i][0]);
-            System.out.println("Your answer: ");
+            System.out.print("Your answer: ");
             Scanner ans = new Scanner(System.in);
             String answer = ans.nextLine();
             if (answer.equals(answersAndQuestions[i][1])) {
@@ -35,11 +35,7 @@ public class Engine {
             }
 
         } Engine.seeYou(name);
-    }
 
-    public static String calcLoose(int answer, int example, String name) {
-        return answer + " is wrong answer ;(. Correct answer was " + example + " \nLet's try again, "
-                + name + "!";
     }
 
     public static String progressionLoose(int answer, int number, String name) {
