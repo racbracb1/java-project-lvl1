@@ -22,7 +22,6 @@ public class Calc {
 
         } return answersAndQuestions;
     }
-
     public static int calc(int numberOne, char operChar, int numberTwo) {
         return switch (operChar) {
             case '+' -> numberOne + numberOne;
