@@ -1,10 +1,10 @@
 package hexlet.code;
 
+import hexlet.code.games.Prime;
 import hexlet.code.games.Even;
+import hexlet.code.games.Progression2;
 import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
-import hexlet.code.games.Prime;
 
 
 import java.util.Scanner;
@@ -37,7 +37,7 @@ public class App {
                 GCD.divisor();
             }
             case CHOICE_PROGRESSION -> {
-                Progression.progression();
+                Progression2.progression2();
             }
             case CHOICE_PRIME -> {
                 Prime.prime();
