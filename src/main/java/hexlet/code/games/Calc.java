@@ -18,14 +18,14 @@ public class Calc {
             int secondNumber = Utils.randomNumber();
             char operChar = OPERATORS[(int) (Math.random() * OPERATORS.length)];
             int correctAnswer = calc(firstNumber, operChar, secondNumber);
-            answersAndQuestions[i][0] = String.valueOf(firstNumber) + " " + operChar + " " + String.valueOf(secondNumber);
+            answersAndQuestions[i][0] = firstNumber + " " + operChar + " " + secondNumber;
             answersAndQuestions[i][1] = String.valueOf(correctAnswer);
 
         } return answersAndQuestions;
     }
     public static int calc(int numberOne, char operChar, int numberTwo) {
         return switch (operChar) {
-            case '+' -> numberOne + numberOne;
+            case '+' -> numberOne + numberTwo;
             case '-' -> numberOne - numberTwo;
             case '*' -> numberOne * numberTwo;
             default -> throw new RuntimeException("Operation " + "'" + "'" + " defined");

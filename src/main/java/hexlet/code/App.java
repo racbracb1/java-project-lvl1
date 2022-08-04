@@ -2,7 +2,7 @@ package hexlet.code;
 
 import hexlet.code.games.Prime;
 import hexlet.code.games.Even;
-import hexlet.code.games.Progression2;
+import hexlet.code.games.Progression;
 import hexlet.code.games.Calc;
 import hexlet.code.games.GCD;
 
@@ -37,7 +37,7 @@ public class App {
                 GCD.divisor();
             }
             case CHOICE_PROGRESSION -> {
-                Progression2.progression2();
+                Progression.progression();
             }
             case CHOICE_PRIME -> {
                 Prime.prime();

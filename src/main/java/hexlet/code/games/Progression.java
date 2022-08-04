@@ -1,55 +1,56 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
+import hexlet.code.Utils;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Progression {
+    private static String question = "What number is missing in the progression?";
+    private static Random random = new Random();
+
+    static final int ARRAYSIZE = 10;
+    static final int ARRAYSIZEMIN = 5;
+    private static int arrayLength = random.nextInt(ARRAYSIZE) + ARRAYSIZEMIN;
+    static final int MAXRANDOMARRAYSTEP = 5;
+    static final int MAXRANDOMFIRSTNUMBER = 10;
+
+
     public static void progression() {
-        var name = Engine.gameGreeting();
-        int indexRightAnswers = 0;
-        final int arraySize = 10;
-        final int arraySizeMin = 5;
-        final int randomStepMin = 2;
-        final int countToWin = 3;
-        System.out.println("What number is missing in the progression?");
-        while (indexRightAnswers < countToWin) {
-            Random random = new Random();
-            int arrayLength = random.nextInt(arraySize) + arraySizeMin;
-            int[] numbers = new int[arrayLength];
-            int questionIndex = random.nextInt(arrayLength);
-            int randomStep = random.nextInt(arraySize) + randomStepMin;
-            int randomFirstNumber = random.nextInt(arraySize) + 1;
-            System.out.print("Question: ");
-            for (int i = 1; i < numbers.length; i++) {
-                numbers[0] = randomFirstNumber;
-                numbers[i] = numbers[i - 1] + randomStep;
+        Engine.gameEngine(question, gameData());
+    }
+    public static String[][] gameData() {
+        String[][] answersAndQuestions = new String[Engine.COUNT_TO_WIN][2];
+        for (int i = 0; i < Engine.COUNT_TO_WIN; i++) {
+            int randomStep = Utils.randomNumber(MAXRANDOMARRAYSTEP);
+            int randomFirstNumber = Utils.randomNumber(MAXRANDOMFIRSTNUMBER);
+            int[] progression = createProgression(arrayLength, randomFirstNumber, randomStep);
+            int questionIndex = random.nextInt(progression.length);
+            String questionNumber = questionNumber(progression, questionIndex);
+            answersAndQuestions[i][0] = questionNumber;
+            answersAndQuestions[i][1] = String.valueOf(progression[questionIndex]);
+        } return answersAndQuestions;
+    }
+
+    public static int[] createProgression(int lengthArray, int randomFirstNumber, int randomStep) {
+        int[] numbers = new int[lengthArray];
+        for (int i = 1; i < numbers.length; i++) {
+            numbers[0] = randomFirstNumber;
+            numbers[i] = numbers[i - 1] + randomStep;
+        } return numbers;
+    }
+    public static String questionNumber(int[] array, int questionIndex) {
+        StringBuilder progressionString = new StringBuilder();
+        String numberString;
+        for (var i = 0; i < array.length; i++) {
+            numberString = String.valueOf(array[i]);
+
+            if (i == questionIndex) {
+                numberString = "..";
             }
-            for (int j = 0; j < questionIndex; j++) {
-                System.out.print(numbers[j] + " ");
-            }
-            System.out.print(".. ");
-            for (int j = questionIndex + 1; j < numbers.length; j++) {
-                System.out.print(numbers[j] + " ");
-            }
-            Scanner answer = new Scanner(System.in);
-            System.out.print("\nYour answer: ");
-            int ans = answer.nextInt();
-            if (ans == numbers[questionIndex]) {
-                System.out.println("Correct!");
-                indexRightAnswers++;
-            } else {
-                System.out.println(Engine.progressionLoose(ans, numbers[questionIndex], name));
-                break;
-            }
+            progressionString.append(numberString).append(" ");
         }
-        if (indexRightAnswers == countToWin) {
-            Engine.seeYou(name);
-        }
+        return progressionString.toString();
     }
 }
-
-
 
