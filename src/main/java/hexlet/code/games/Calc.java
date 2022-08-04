@@ -17,8 +17,9 @@ public class Calc {
             int firstNumber = Utils.randomNumber();
             int secondNumber = Utils.randomNumber();
             char operChar = OPERATORS[(int) (Math.random() * OPERATORS.length)];
-            answersAndQuestions[i][0] = firstNumber + " " + operChar + " " + secondNumber;
-            answersAndQuestions[i][1] = String.valueOf(calc(firstNumber, operChar, secondNumber));
+            int correctAnswer = calc(firstNumber, operChar, secondNumber);
+            answersAndQuestions[i][0] = String.valueOf(firstNumber) + " " + operChar + " " + String.valueOf(secondNumber);
+            answersAndQuestions[i][1] = String.valueOf(correctAnswer);
 
         } return answersAndQuestions;
     }
