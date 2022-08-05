@@ -9,7 +9,7 @@ public class Calc {
     static final char[] OPERATORS = new char[] {'+', '-', '*'};
     private static String question = "What is the result of the expression?";
     private static Random random = new Random();
-    private static int MAX_NUMBER = 100;
+    private static final int MAX_NUMBER = 100;
 
     public static void calculate() {
 

@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class Prime {
     private static String question = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    private static int MAX_RANDOM_NUMBER = 100;
+    private static final int MAX_RANDOM_NUMBER = 100;
 
     public static void prime() {
         Engine.runGame(question, collectData());

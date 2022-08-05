@@ -8,7 +8,7 @@ import java.util.Random;
 public class Even {
     private static String question = "Answer 'yes' if number even otherwise answer 'no'.";
     private static Random random = new Random();
-    private static int MAX_NUMBER = 100;
+    private static final int MAX_NUMBER = 100;
 
     public static void checkParity() {
         Engine.runGame(question, collectData());
