@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.Utils;
 
 import java.util.Random;
 
@@ -22,8 +21,9 @@ public class Progression {
     public static String[][] collectData() {
         String[][] answersAndQuestions = new String[Engine.COUNT_TO_WIN][2];
         for (int i = 0; i < Engine.COUNT_TO_WIN; i++) {
-            int randomStep = Utils.randomNumber(MAXRANDOMARRAYSTEP);
-            int randomFirstNumber = Utils.randomNumber(MAXRANDOMFIRSTNUMBER);
+            //Random random = new Random();
+            int randomStep = random.nextInt(MAXRANDOMARRAYSTEP);
+            int randomFirstNumber = random.nextInt(MAXRANDOMFIRSTNUMBER);
             int[] progression = createProgression(arrayLength, randomFirstNumber, randomStep);
             int questionIndex = random.nextInt(progression.length);
             String questionNumber = addQuestionNumber(progression, questionIndex);

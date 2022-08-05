@@ -1,12 +1,15 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.Utils;
+
+import java.util.Random;
 
 
 public class Calc {
     static final char[] OPERATORS = new char[] {'+', '-', '*'};
     private static String question = "What is the result of the expression?";
+    private static Random random = new Random();
+    private static int MAX_NUMBER = 100;
 
     public static void calculate() {
 
@@ -15,8 +18,8 @@ public class Calc {
     public static String[][] collectData() {
         String[][] answersAndQuestions = new String[Engine.COUNT_TO_WIN][2];
         for (int i = 0; i < Engine.COUNT_TO_WIN; i++) {
-            int firstNumber = Utils.randomNumber();
-            int secondNumber = Utils.randomNumber();
+            int firstNumber = random.nextInt(MAX_NUMBER);
+            int secondNumber = random.nextInt(MAX_NUMBER);
             char operChar = OPERATORS[(int) (Math.random() * OPERATORS.length)];
             int correctAnswer = chooseRandomOper(firstNumber, operChar, secondNumber);
             answersAndQuestions[i][0] = firstNumber + " " + operChar + " " + secondNumber;
