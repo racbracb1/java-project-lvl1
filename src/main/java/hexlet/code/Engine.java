@@ -22,7 +22,7 @@ public class Engine {
         System.out.println("Hello, " + name + "!");
         System.out.println(question);
         for (int i = 0; i < COUNT_TO_WIN; i++) {
-            System.out.println("Question: " + answersAndQuestions[i][0] + " " + answersAndQuestions[i][1]);
+            System.out.println("Question: " + answersAndQuestions[i][0]);
             System.out.print("Your answer: ");
             Scanner ans = new Scanner(System.in);
             String answer = ans.nextLine();
