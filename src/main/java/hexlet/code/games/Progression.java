@@ -17,16 +17,16 @@ public class Progression {
 
 
     public static void progression() {
-        Engine.gameEngine(question, gameData());
+        Engine.runGame(question, collectData());
     }
-    public static String[][] gameData() {
+    public static String[][] collectData() {
         String[][] answersAndQuestions = new String[Engine.COUNT_TO_WIN][2];
         for (int i = 0; i < Engine.COUNT_TO_WIN; i++) {
             int randomStep = Utils.randomNumber(MAXRANDOMARRAYSTEP);
             int randomFirstNumber = Utils.randomNumber(MAXRANDOMFIRSTNUMBER);
             int[] progression = createProgression(arrayLength, randomFirstNumber, randomStep);
             int questionIndex = random.nextInt(progression.length);
-            String questionNumber = questionNumber(progression, questionIndex);
+            String questionNumber = addQuestionNumber(progression, questionIndex);
             answersAndQuestions[i][0] = questionNumber;
             answersAndQuestions[i][1] = String.valueOf(progression[questionIndex]);
         } return answersAndQuestions;
@@ -39,12 +39,11 @@ public class Progression {
             numbers[i] = numbers[i - 1] + randomStep;
         } return numbers;
     }
-    public static String questionNumber(int[] array, int questionIndex) {
+    public static String addQuestionNumber(int[] array, int questionIndex) {
         StringBuilder progressionString = new StringBuilder();
         String numberString;
         for (var i = 0; i < array.length; i++) {
             numberString = String.valueOf(array[i]);
-
             if (i == questionIndex) {
                 numberString = "..";
             }

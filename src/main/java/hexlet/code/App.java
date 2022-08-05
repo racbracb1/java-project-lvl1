@@ -28,7 +28,7 @@ public class App {
                 Cli.greeting();
             }
             case CHOICE_EVEN -> {
-                Even.parityCheck();
+                Even.checkParity();
             }
             case CHOICE_CALC -> {
                 Calc.calculate();

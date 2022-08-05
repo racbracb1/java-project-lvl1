@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Engine {
     public static final int COUNT_TO_WIN = 3;
-    public static String gameGreeting() {
+    public static String greetUser() {
         Scanner nameUser = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
@@ -14,7 +14,7 @@ public class Engine {
         return name;
     }
 
-    public static void gameEngine(String question, String[][]answersAndQuestions) {
+    public static void runGame(String question, String[][]answersAndQuestions) {
         Scanner nameUser = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
@@ -36,11 +36,6 @@ public class Engine {
 
         } Engine.seeYou(name);
 
-    }
-
-    public static String progressionLoose(int answer, int number, String name) {
-        return answer + " is wrong answer ;(. Correct answer was " + number + " \nLet's try again, "
-                + name + "!";
     }
 
     public static void seeYou(String name) {
